@@ -1,0 +1,15 @@
+<ng-container *ngIf="[todos]">
+    <table class="table">
+
+        <tr *ngFor="let todo of todos">
+
+            <td>
+                <h3>{{ todo.name}}</h3>
+            </td>
+            <td>
+                <p>{{ todo.date | date:'mediumTime'}}</p>
+            </td>
+            <td (click)="delete(todo.id)"><button>Delete</button></td>
+        </tr>
+    </table>
+</ng-container>
